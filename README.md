@@ -8,7 +8,7 @@ Changes the configurations an Ampbase channel serves its agents, through a track
 
 ## Install
 
-From the root of your repository:
+The installer needs Node.js 22.20 or later. From the root of your repository:
 
 ```bash
 npx skills add ampbase-io/skills --skill ampbase-tracks
@@ -20,6 +20,6 @@ To install by hand, copy `skills/ampbase-tracks/` into `.agents/skills/`, which 
 
 ## Give the agent a token
 
-The agent needs an Ampbase API token at the Editor role in the `AMPBASE_TOKEN` environment variable. [API tokens](https://ampbase.io/docs/api-tokens) shows how to mint one. With it the agent can read the channel, save into tracks, soundcheck them and mark them ready.
+The agent needs an Ampbase API token at the Editor role in the `AMPBASE_TOKEN` environment variable. [API tokens](https://ampbase.io/docs/api-tokens) shows how to mint one. With it the agent can read the channel, save into tracks, soundcheck them and mark them ready. Soundchecking a head that arms enforcement takes an Admin, and is refused for an Editor token, as step 6 of [Tracks through the API](https://ampbase.io/docs/tracks-api) says.
 
 An Editor token cannot ship a track. Shipping it takes an Admin, so a track the agent marks ready waits for the next rollout.
