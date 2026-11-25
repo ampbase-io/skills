@@ -9,4 +9,4 @@ Use this skill to change the configurations an Ampbase channel serves its agents
 
 Before your first call, fetch https://ampbase.io/docs/tracks-api.md and follow its working rules. It holds every call this work makes and the rules for making them, as this Ampbase serves them now. For anything else, https://ampbase.io/llms.txt lists every page of the Ampbase documentation as markdown.
 
-Your API token is in the `AMPBASE_TOKEN` environment variable. Send it as `Authorization: Bearer $AMPBASE_TOKEN`, and never print it, log it or write it to a file.
+Your API token is in the `AMPBASE_TOKEN` environment variable. Send it as `Authorization: Bearer $AMPBASE_TOKEN` on API calls only: the documentation pages need no token, so fetch them without it. Never print it, log it or write it to a file.
