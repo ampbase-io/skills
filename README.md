@@ -14,7 +14,7 @@ The installer needs Node.js 22.20 or later. From the root of your repository:
 npx skills add ampbase-io/skills --skill ampbase-tracks
 ```
 
-The installer asks which agents to install for. To choose them up front, add `-a` once per agent, for example `-a claude-code -a codex`. Commit the installed files so everyone working in the repository gets the skill.
+The installer asks which agents to install for, and whether to install into this project or globally. To give the skill to everyone working in the repository, choose Project, then commit the installed files. Global installs it in your home directory for you alone, and leaves nothing to commit. To choose the agents up front, add `-a` once per agent, for example `-a claude-code -a codex`; add `-g` to install globally without the scope question.
 
 To install by hand, copy `skills/ampbase-tracks/` into `.agents/skills/`, which Codex, Cursor and most other agents read. For Claude Code, copy it into `.claude/skills/` instead.
 
